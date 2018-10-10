@@ -40,16 +40,19 @@ public class RepoViewHolder extends RecyclerView.ViewHolder {
     void bindData(Repo repo) {
         this.mRepo = repo;
 
-        if (TextUtils.isEmpty(mRepo.getFullName())) {
-            name.setText(mRepo.getFullName());
+        if (TextUtils.isEmpty(mRepo.getName())) {
+            name.setText(mRepo.getName());
         }
 
         if (!TextUtils.isEmpty(mRepo.getDescription())) {
             description.setText(mRepo.getDescription());
         }
 
-
-
+        if (!TextUtils.isEmpty(mRepo.getLanguage())) {
+            language.setText(mRepo.getLanguage());
+            language.setVisibility(View.VISIBLE);
+        } else {
+            language.setVisibility(View.INVISIBLE);
+        }
     }
-
 }

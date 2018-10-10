@@ -21,8 +21,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingHorizontal="@dimen/row_item_margin_horizontal"
+    android:paddingStart="@dimen/horizontal_padding"
     android:paddingTop="@dimen/row_item_margin_vertical"
+    android:paddingEnd="@dimen/horizontal_padding"
     tools:ignore="UnusedAttribute">
 
     <TextView
@@ -65,13 +66,13 @@
     <ImageView
         android:id="@+id/star"
         android:layout_width="0dp"
-        android:layout_marginVertical="@dimen/row_item_margin_vertical"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_star"
-        app:layout_constraintEnd_toStartOf="@+id/repo_stars"
+        android:layout_marginVertical="@dimen/row_item_margin_vertical"
+        android:src="@drawable/ic_star_black_24dp"
         app:layout_constraintBottom_toBottomOf="@+id/repo_stars"
+        app:layout_constraintEnd_toStartOf="@+id/repo_stars"
         app:layout_constraintTop_toTopOf="@+id/repo_stars"
-    />
+        />
 
     <TextView
         android:id="@+id/repo_stars"
@@ -79,8 +80,8 @@
         android:layout_height="wrap_content"
         android:paddingVertical="@dimen/row_item_margin_vertical"
         android:textSize="@dimen/repo_description_size"
-        app:layout_constraintEnd_toStartOf="@id/forks"
         app:layout_constraintBaseline_toBaselineOf="@+id/repo_forks"
+        app:layout_constraintEnd_toStartOf="@id/forks"
         tools:text="30"/>
 
     <ImageView
@@ -88,11 +89,11 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginVertical="@dimen/row_item_margin_vertical"
-        android:src="@drawable/ic_git_branch"
-        app:layout_constraintEnd_toStartOf="@+id/repo_forks"
+        android:src="@drawable/ic_directions_black_24dp"
         app:layout_constraintBottom_toBottomOf="@+id/repo_forks"
+        app:layout_constraintEnd_toStartOf="@+id/repo_forks"
         app:layout_constraintTop_toTopOf="@+id/repo_forks"
-    />
+        />
 
     <TextView
         android:id="@+id/repo_forks"
